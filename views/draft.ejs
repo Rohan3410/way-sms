@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Draft</title>       
+    </head>
+    <body>
+      <form action="/draft" method="post">
+        <div align="center" style="padding-top: 20px">
+            <h2>Draft</h2>
+             <div id="foo" style="display:none">
+              <table style="color: white;" align="center">
+
+                <% for(var i=0; i < data.length; i++) { %>
+                   <tr>
+                    <td class="tbl"><input type="checkbox" name="drf" value="<%= data[i].sms %>"></td>
+                     <td class="tbl"><%= data[i].sms %></td>
+                   </tr>
+                <% } %>
+
+           </table>
+           </div>
+      </div>
+      </form> 
+    </body>
+</html>

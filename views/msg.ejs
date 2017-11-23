@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>message</title>
+			<script type="text/javascript">
+				function showCon(){
+         foo = document.getElementById('foo')
+         foo.style.display="block";
+				}
+			</script>	
+					<style type="text/css">
+				.tbl{
+					width: 100px;
+				}
+			</style>			
+		</head>
+		<body>
+			<h2 align="center"><i>Message</i></h2>
+			<form action="/addDraft" method="get">
+			<form action="/send" method="post">
+				  <div align="center" style="padding-top: 20px">
+								 <input type="text" cols="40" rows="5" style="width:600px; height:200px;" name="textsms" id="Text1" value="" placeholder="Enter text..."/><br/><br/>
+					       <input type="submit" name="send" value="Send"/>
+					       <input type="button" name="addNum" value="Add Contacts" onclick="showCon()"/>
+					       <input type="reset" name="reset" value="Cancel"/>
+
+					       <input type="submit" name="draft" value="Draft"/><br/><br/>
+					       </form>
+					       <div id="foo" style="display:none">
+							   	 <table style="color: white;" align="center">
+			              <strong>Note:</strong> select only one Number at a time.
+								      <% for(var i=0; i < data.length; i++) { %>
+								         <tr>
+								           <td class="tbl"><%= data[i].name %></td>
+								           <td class="tbl"><%= data[i].number %></td>
+								           <td class="tbl"><input type="checkbox" name="add" value="<%= data[i].number %>"></td>
+								         </tr>
+								      <% } %>
+
+					         </table>
+				         </div>
+		          
+		      </div>
+			</form>	
+		</body> 
+</html>

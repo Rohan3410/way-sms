@@ -1,0 +1,41 @@
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/profileStyle.css">
+    <form action="/updateProfile" method="post">
+<div class="container">
+	<div class="row login_box">
+	    <div class="col-md-12 col-xs-12" align="center">
+            <div class="line"><h3>12 : 30 AM</h3></div><br>
+            <div class="outter"><img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="image-circle"/></div>   
+            <h1>Hi <%=result.firstName%></h1>
+        
+	    </div>
+    
+	        <div class="col-md-12 col-xs-12 login_control">
+	                
+	                 <div class="control">
+	                    <div class="label">First Name</div>
+	                    <input type="text" class="form-control" name="fname" value="<%=result.firstName%>"/>
+	                </div>
+
+	                 <div class="control">
+	                    <div class="label">Last Name</div>
+	                    <input type="text" class="form-control" value="<%=result.lastName%>" name="lname"/>
+	                </div>
+
+	                <div class="control">
+	                    <div class="label">Email Address</div>
+	                    <input type="text" class="form-control" value="<%=result.email%>" disabled/>
+	                </div>
+	                
+	                <div class="control">
+	                     <div class="label">Password</div>
+	                    <input type="password" class="form-control" value="<%=result.password%>" name="pwd"/>
+	                </div>
+	                <div align="center">
+	                     <input type="reset" class="btn btn-orange" value='Cancel'><input type="submit" name="" class="btn btn-orange" value="Save"/>
+	                </div>
+	                
+	        </div>
+       </form>       
+    </div>
+</div>

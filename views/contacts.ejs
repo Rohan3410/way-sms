@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Contacts</title>
+			<style type="text/css">
+				.tbl{
+					width: 100px;
+				}
+			</style>
+		</head>
+		<body>
+			<h2 align="center"><i>Contacts Details</i></h2>	
+			<form action="/add" method="post">
+				<br/>
+						<table align="center">
+							<tr><td>Name : <input type="text" name="name" placeholder="enter name"></td>
+							<td>Number : <input type="number" name="num" placeholder="enter number"></td>
+		          <td><input type="submit" name="addCon" value="Add Number"/></td>
+							<td><input type="reset" name="cancel" value="Cancel"/></td>
+					   </table>
+					   </form>
+					   <br/><br/><br/><br/>
+					   <form action="/rmv" method="post">
+					   	<h3 align="center">Contacts to Display</h3>
+						<table style="color: white;" align="center">
+
+					      <% for(var i=0; i < data.length; i++) { %>
+					         <tr>
+					           <td class="tbl"><%= data[i].name %></td>
+					           <td class="tbl"><%= data[i].number %></td>
+					           <td class="tbl"><button name="number" value="<%= data[i].number %>">Remove</button></td>
+					         </tr>
+					      <% } %>
+
+		       </table>
+			</form>	
+   </body>
+</html>
